@@ -13,17 +13,29 @@ export class ActionSheetPage implements OnInit {
       data: {
         action: 'delete',
       },
+      icon: 'trash-outline',
     },
     {
       text: 'Share',
+      icon: 'share-social-outline',
       handler: () => {
         console.log('compartiendo')
       }
     },
     {
+      text: 'play',
+      icon: 'play-outline',
+      data: {
+        resumen: 'calo es gay'
+      },
+      handler: () => {
+        console.log('play')
+      }
+    },
+    {
       text: 'Cancel',
       role: 'cancel',
-      cssClass: 'rojo',
+      icon: 'close-outline',
       data: {
         action: 'cancel',
       },
