@@ -1,0 +1,17 @@
+.content {
+  &__body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    color: white;
+  }
+}
+
+.rojo {
+  color: red !important;
+  background: yellow;
+}
