@@ -15,9 +15,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/action-sheet/action-sheet.module').then(m => m.ActionSheetPageModule)
   },
   {
-    path: '**',
-    redirectTo: 'inicio',
+    path: 'date-times',
+    loadChildren: () => import('./pages/date-times/date-times.module').then(m => m.DateTimesPageModule)
+  },  {
+    path: 'fab',
+    loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
   }
+
+
 
 ];
 

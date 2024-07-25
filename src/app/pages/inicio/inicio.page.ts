@@ -22,6 +22,16 @@ export class InicioPage implements OnInit {
       icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
+    },
+    {
+      icon: 'calendar-outline',
+      name: 'Dates',
+      redirectTo: '/date-times'
+    },
+    {
+      icon: 'car-outline',
+      name: 'Fab',
+      redirectTo: '/fab'
     }
   ];
   constructor() { }

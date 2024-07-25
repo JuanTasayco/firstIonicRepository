@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Date Times</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="datetime-container">
+    <ion-datetime (ionChange)="eventoFecha($event)" [formatOptions]="formatOptions">
+      <span slot="title">Select Date</span>
+    </ion-datetime>
+
+    <h2 style="align-self: start; padding-left: 2rem;">Date with Buttons</h2>
+    <ion-datetime color="rose" (ionChange)="eventoFecha($event)" [formatOptions]="formatOptions"
+      [showDefaultButtons]="true" doneText="Aceptar" cancelText="Cancelar">
+      <span slot="title">Select Date</span>
+    </ion-datetime>
+
+
+    <h2 style="align-self: start; padding-left: 2rem;">Personal custom Buttons Calendary</h2>
+    <ion-datetime #datetime>
+      <ion-buttons slot="buttons">
+        <ion-button color="danger" (click)="datetime.reset()">Reset</ion-button>
+        <ion-button color="success" (click)="datetime.cancel()">Cancelar</ion-button>
+        <ion-button color="warning" (click)="datetime.confirm()">Aceptar</ion-button>
+      </ion-buttons>
+      <span slot="title">Select Date</span>
+    </ion-datetime>
+  </div>
+
+
+
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Fab</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <ion-list *ngFor="let item of data; let i = index " [inset]="true" lines="none">
+    <ion-item> {{'Item '+i}}</ion-item>
+  </ion-list>
+  <!--   <h2>Simple button</h2>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <!-- Button tryhard -->
+
+
+  <ion-fab vertical="center" horizontal="end" slot="fixed">
+    <ion-fab-button size="small">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="pressIcon('facebook')">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="pressIcon('twitter')" color="twitter">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+
+      <ion-fab-button (click)="pressIcon('youtube')" color="youtube">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="start">
+      <ion-fab-button (click)="pressIcon('angular')">
+        <ion-icon name="logo-angular"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="pressIcon('ionic')">
+        <ion-icon name="logo-ionic"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="pressIcon('angular')">
+        <ion-icon name="logo-angular"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="pressIcon('ionic')">
+        <ion-icon name="logo-ionic"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="pressIcon('youtube')">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
