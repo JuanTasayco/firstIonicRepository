@@ -20,6 +20,10 @@ const routes: Routes = [
   },  {
     path: 'fab',
     loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
+  },
+  {
+    path: 'grid-system',
+    loadChildren: () => import('./pages/grid-system/grid-system.module').then( m => m.GridSystemPageModule)
   }
 
 

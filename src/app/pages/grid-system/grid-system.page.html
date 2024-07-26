@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Grid System </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col class="grid__col" size="12" size-md="8">1</ion-col>
+      <ion-col class="grid__col" size="12" size-md="4">2</ion-col>
+      <ion-col class="grid__col" size="6">3</ion-col>
+      <ion-col class="grid__col" size="6">4</ion-col>
+      <ion-col class="grid__col" size="10">5</ion-col>
+      <ion-col class="grid__col" size="2">6</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="grid__col">1</ion-col>
+      <ion-col class="grid__col">2</ion-col>
+      <ion-col class="grid__col">3</ion-col>
+      <ion-col class="grid__col">4</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <h2>Push and pull</h2>
+  <ion-row>
+    <ion-col class="grid__col" pull="4">1</ion-col>
+    <ion-col class="grid__col" pull="4">2</ion-col>
+    <ion-col class="grid__col" pull="4">3</ion-col>
+  </ion-row>
+</ion-content>
