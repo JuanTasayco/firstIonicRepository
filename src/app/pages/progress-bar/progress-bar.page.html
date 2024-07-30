@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Progress Bar and Range</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- progress con Value -->
+  <div class="progress-content">
+    <h2>Progress Bar con value</h2>
+    <ion-progress-bar [value]="progress"></ion-progress-bar>
+
+    <hr>
+    <h2>Progress Bar indeterminate</h2>
+    <ion-progress-bar type="indeterminate" color="warning"></ion-progress-bar>
+
+    <hr>
+    <ion-progress-bar type="indeterminate" color="danger"></ion-progress-bar>
+
+    <hr>
+    <h2>Ion Range</h2>
+
+    <ion-range labelPlacement="start" label="Inicio de Range"></ion-range>
+    <hr>
+    <ion-range labelPlacement="end" label="Final de Range"></ion-range>
+    <hr>
+    <ion-range labelPlacement="stacked" label="Flotando, modo stacked Range"></ion-range>
+
+    <ion-range>
+      <div slot="label"> Label with<ion-text color="success"> custom HTML</ion-text></div>
+    </ion-range>
+
+    <h2>Double range</h2>
+
+    <ion-range [dualKnobs]="true" [value]="{lower:20,upper:80}"></ion-range>
+
+    <h2>With Format</h2>
+    <ion-range aria-label="Range with pin" [ticks]="true" [pinFormatter]="pinFormatter"
+      (ionChange)="eventRange($event)"></ion-range>
+  </div>
+
+</ion-content>

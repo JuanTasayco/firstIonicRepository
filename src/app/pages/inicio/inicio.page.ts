@@ -37,12 +37,37 @@ export class InicioPage implements OnInit {
       icon: 'grid-outline',
       name: 'Sistema Grid',
       redirectTo: '/grid-system'
+    },
+    {
+      icon: 'infinite-outline',
+      name: 'Infinite Scroll',
+      redirectTo: '/infinite-scroll'
+    },
+    {
+      icon: 'logo-ionic',
+      name: 'Modal example',
+      redirectTo: '/modal'
+    },
+    {
+      icon: 'tablet-portrait-outline',
+      name: 'Popover',
+      redirectTo: '/popover'
+    },
+    {
+      icon: 'sync-outline',
+      name: 'Progress Bar and Range',
+      redirectTo: '/progress-bar'
+    },
+    {
+      icon: 'refresher',
+      name: 'Refresher',
+      redirectTo: '/ion-refresher'
     }
   ];
   constructor() { }
 
   ngOnInit() {
-    /*  */
+    console.log('init')
   }
 
 }

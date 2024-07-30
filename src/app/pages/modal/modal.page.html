@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>modal</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="modal">
+    <ion-button expand="block" (click)="openModal()">Abrir Modal</ion-button>
+    <p>{{message}}</p>
+  </div>
+
+</ion-content>
