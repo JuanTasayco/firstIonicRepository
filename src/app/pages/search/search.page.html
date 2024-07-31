@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- comun searchbar -->
+  <ion-searchbar placeholder="Custom Placeholder"></ion-searchbar>
+  <!-- other icon and custom clear button  -->
+  <ion-searchbar search-icon="search-circle" value="Valor para borrar" disabled="false" show-clear-button="always"
+    clear-icon="trash-bin"></ion-searchbar>
+  <!--  with animation -->
+  <ion-searchbar animated="true" placeholder="Animated"></ion-searchbar>
+  <!-- cancel button -->
+  <ion-searchbar show-cancel-button="always" placeholder="Boton focus cancelar"></ion-searchbar>
+  <!--   cancel button with custom icon or text -->
+  <ion-searchbar show-cancel-button="focus" cancel-button-text="Custom Cancel"
+    cancel-button-icon="trash"></ion-searchbar>
+
+  <h2 style="margin-left:1.3rem">Example Search</h2>
+  <!-- busqueda -->
+  <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+  <ion-list *ngFor="let result of results">
+    <ion-item>{{result}}</ion-item>
+  </ion-list>
+
+</ion-content>

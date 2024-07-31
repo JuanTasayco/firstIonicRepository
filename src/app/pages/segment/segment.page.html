@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Segment and Skeleton</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-segment [scrollable]="true" value="todos" (ionChange)="filterHero($event)">
+    <ion-segment-button value="todos">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="dc">
+      <ion-label>DC Comics</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="marvel">
+      <ion-label>Marvel Comics</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list *ngIf="superheroes.length>0">
+    <ion-item *ngFor="let super of results">
+      {{super.superhero}}
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list *ngIf="superheroes.length===0">
+    <ion-item *ngFor="let super of [1,2,3,1,1,1,1,1,1,1,1,1,1]">
+      <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

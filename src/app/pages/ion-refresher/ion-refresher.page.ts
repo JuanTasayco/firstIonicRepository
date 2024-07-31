@@ -11,8 +11,8 @@ export class IonRefresherPage implements OnInit {
 
   ngOnInit() {
     setInterval(() => {
-      const nuevo = "";
-      this.items.push(nuevo);
+      /*      const nuevo = "";
+           this.items.push(nuevo); */
     }, 1000)
   }
 

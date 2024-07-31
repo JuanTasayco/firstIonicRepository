@@ -59,9 +59,24 @@ export class InicioPage implements OnInit {
       redirectTo: '/progress-bar'
     },
     {
-      icon: 'refresher',
+      icon: 'logo-facebook',
       name: 'Refresher',
       redirectTo: '/ion-refresher'
+    },
+    {
+      icon: 'search-outline',
+      name: 'Search',
+      redirectTo: '/search'
+    },
+    {
+      icon: 'wallet-outline',
+      name: 'Segments',
+      redirectTo: '/segment'
+    },
+    {
+      icon: 'wallet-outline',
+      name: 'Swiper Slide',
+      redirectTo: '/slide-swiper'
     }
   ];
   constructor() { }

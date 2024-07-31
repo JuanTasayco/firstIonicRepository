@@ -33,18 +33,39 @@ const routes: Routes = [
   {
     path: 'modal',
     loadChildren: () => import('./pages/modal/modal.module').then(m => m.ModalPageModule)
-  },  {
+  },
+  {
     path: 'popover',
-    loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
+    loadChildren: () => import('./pages/popover/popover.module').then(m => m.PopoverPageModule)
   },
   {
     path: 'progress-bar',
-    loadChildren: () => import('./pages/progress-bar/progress-bar.module').then( m => m.ProgressBarPageModule)
+    loadChildren: () => import('./pages/progress-bar/progress-bar.module').then(m => m.ProgressBarPageModule)
   },
   {
     path: 'ion-refresher',
-    loadChildren: () => import('./pages/ion-refresher/ion-refresher.module').then( m => m.IonRefresherPageModule)
+    loadChildren: () => import('./pages/ion-refresher/ion-refresher.module').then(m => m.IonRefresherPageModule)
   },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then(m => m.SearchPageModule)
+  },
+  {
+    path: 'segment',
+    loadChildren: () => import('./pages/segment/segment.module').then(m => m.SegmentPageModule)
+  },
+  {
+    path: 'slide-swiper',
+    loadChildren: () => import('./pages/slide-swiper/slide-swiper.module').then(m => m.SlideSwiperPageModule)
+  },
+  {
+    path: 'split-pane',
+    loadChildren: () => import('./pages/split-pane/split-pane.module').then(m => m.SplitPanePageModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'inicio'
+  }
 
 
 
