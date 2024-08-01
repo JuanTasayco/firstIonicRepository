@@ -63,9 +63,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/split-pane/split-pane.module').then(m => m.SplitPanePageModule)
   },
   {
+    path: 'toast',
+    loadChildren: () => import('./pages/toast/toast.module').then(m => m.ToastPageModule)
+  },
+  {
     path: '**',
     redirectTo: 'inicio'
-  }
+  },
+
+
 
 
 

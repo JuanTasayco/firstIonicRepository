@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>toast</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h2>Simple toast</h2>
+    <ion-button id="open-toast">Abrir toast</ion-button>
+    <ion-toast trigger="open-toast" message="This toast will disappear after 3 seconds" [duration]="3000"></ion-toast>
+
+    <hr>
+    <h3>Toast from the componente</h3>
+
+    <div style="display:flex;justify-content: center; flex-direction: column;">
+      <ion-button (click)="presentToast('top')">Present Toast At the Top</ion-button>
+      <ion-button (click)="presentToast('middle')">Present Toast At the Middle</ion-button>
+      <ion-button (click)="presentToast('bottom')">Present Toast At the Bottom</ion-button>
+    </div>
+
+  </div>
+
+</ion-content>

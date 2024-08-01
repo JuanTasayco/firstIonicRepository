@@ -77,6 +77,11 @@ export class InicioPage implements OnInit {
       icon: 'wallet-outline',
       name: 'Swiper Slide',
       redirectTo: '/slide-swiper'
+    },
+    {
+      icon: 'cafe-outline',
+      name: 'Toast',
+      redirectTo: '/toast'
     }
   ];
   constructor() { }
